@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">AndroidBasic</string>
+    <string name="app_name">Create new account</string>
     <string name="to">To</string>
     <string name="subject">Subject</string>
     <string name="message">Message</string>
