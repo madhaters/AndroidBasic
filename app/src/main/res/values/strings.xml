@@ -1,7 +1,21 @@
 <resources>
-    <string name="app_name">Create new account</string>
+    <string name="app_name">Relative Layout</string>
     <string name="to">To</string>
     <string name="subject">Subject</string>
     <string name="message">Message</string>
     <string name="send">Send</string>
+    <string name="done">Done</string>
+    <string name="reminder">Reminder</string>
+    <array name="time">
+        <item>8:40</item>
+        <item>8:41</item>
+        <item>8:42</item>
+        <item>8:43</item>
+        <item>8:44</item>
+    </array>
+    <array name="dates">
+        <item>Wed 10 June</item>
+        <item>Wed 10 May</item>
+        <item>Wed 10 April</item>
+    </array>
 </resources>
