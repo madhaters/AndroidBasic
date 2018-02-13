@@ -1,8 +1,16 @@
 <resources>
-    <string name="app_name">Create new account</string>
+    <string name="app_name">Calculator</string>
     <string name="to">To </string>
     <string name="subject">Subject</string>
     <string name="message">Message</string>
     <string name="send">Send</string>
-
-</resources>
+    <string name="reminder">Reminder name</string>
+    <string name="done">done</string>
+    <array name="time">
+        <item>65861</item>
+    </array>
+    <array name="date">
+        <item>5385</item>
+    <item>8396</item>item>
+</array>
+    </resources>
