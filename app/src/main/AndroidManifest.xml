@@ -9,21 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"/>
-        <activity android:name=".ListActivity"/>
-        <activity
-            android:name=".ToolbarActivity"
-            android:theme="@style/NoActionBarTheme"/>
-        <activity
-            android:name=".ViewPagerActivity"
-            android:theme="@style/NoActionBarTheme">
+
+        <activity android:name=".MainActivity">
 
         </activity>
-        <activity android:name=".FragmentActivity">
+        <activity android:name=".TestActivity">
             <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
     </application>
