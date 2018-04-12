@@ -4,8 +4,14 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
+import android.widget.ProgressBar;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
+import com.madhatters.androidbasic.backend.ApiHandler;
+import com.madhatters.androidbasic.domain.BaseResponse;
 import com.madhatters.androidbasic.domain.City;
 
 public class TestActivity extends AppCompatActivity {
@@ -17,6 +23,22 @@ public class TestActivity extends AppCompatActivity {
         setContentView(R.layout.test_activity_layout);
         City city = new Gson().fromJson(json, City.class);
         Log.d("cities", "onCreate: " + city);
+        final TextView textView = findViewById(R.id.ayatView);
+        final ProgressBar progressBar = findViewById(R.id.progressBar);
+        ApiHandler.getInstance().getTodayAyah(new ApiHandler.MyCallback() {
+            @Override
+            public void onSuccess(BaseResponse baseResponse) {
+                textView.setVisibility(View.VISIBLE);
+                progressBar.setVisibility(View.GONE);
+                textView.setText(baseResponse.getData().getText());
+            }
+
+            @Override
+            public void onError(String message) {
+                progressBar.setVisibility(View.GONE);
+                Toast.makeText(TestActivity.this, message, Toast.LENGTH_LONG).show();
+            }
+        });
     }
 
     @Override
